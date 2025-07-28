@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+      integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .container {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #303030;
+      }
+      #chat {
+        display: flex;
+        flex-direction: column;
+        width: 40%;
+        height: 80%;
+        box-shadow: 0px 0px 2em gray;
+        border-radius: 1em;
+        background-color: rgb(69, 16, 204);
+      }
+      nav {
+        display: flex;
+        color: white;
+        height: 8%;
+        align-items: center;
+        padding: 0.8em 1.2em;
+        justify-content: space-between;
+        box-sizing: border-box;
+      }
+      #chat-area {
+        height: 84%;
+        box-sizing: border-box;
+        background: linear-gradient(
+            rgba(202, 206, 194, 0.7),
+            rgba(202, 206, 194, 0.7)
+          ),
+          url(./bgimg.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #message-area {
+        height: 8%;
+        display: flex;
+        box-sizing: border-box;
+        background-color: rgb(73, 71, 71);
+        color: white;
+      }
+      #pro-img {
+        font-size: 1.2em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 1.6em;
+        height: 1.6em;
+        background-color: rgb(253, 148, 166);
+        color: white;
+        border-radius: 50%;
+      }
+      #profile {
+        display: flex;
+        gap: 1em;
+        height: 100%;
+        align-items: center;
+      }
+      #theme {
+        width: 1.9em;
+        height: 1.9em;
+        background: radial-gradient(white, orange, yellow, white);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #input::placeholder {
+        color: white;
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="chat">
+        <nav style="border-bottom: 1px solid lightgrey">
+          <div id="profile">
+            <div id="pro-img">CB</div>
+            <div id="name">ChatBot</div>
+          </div>
+          <div type="button" id="theme">
+            <i
+              class="fa-solid fa-sun"
+              style="font-size: 1.2em; color: rgb(255, 106, 0); cursor: pointer"
+              onclick="window.location.href='./index.html'"
+            ></i>
+          </div>
+        </nav>
+        <div id="chat-area"></div>
+        <div
+          id="message-area"
+          style="
+            border-top: 1px solid lightgrey;
+            border-bottom-right-radius: 1em;
+            border-bottom-left-radius: 1em;
+          "
+        >
+          <input
+            type="text"
+            placeholder="Type a message"
+            id="input"
+            style="
+              width: 85%;
+              height: 100%;
+              box-sizing: border-box;
+              border: none;
+              padding: 0em 1em;
+              background-color: rgb(73, 71, 71);
+              color: white;
+              border-bottom-left-radius: 1em;
+            "
+          />
+          <div
+            id="sent"
+            type="button"
+            style="
+              width: 15%;
+              cursor: pointer;
+              height: 100%;
+              align-items: center;
+              display: flex;
+              justify-content: center;
+              box-sizing: border-box;
+              border-bottom-right-radius: 1em;
+            "
+          >
+            <i class="fa-solid fa-paper-plane" id="send"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

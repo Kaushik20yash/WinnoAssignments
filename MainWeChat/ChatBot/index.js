@@ -1,0 +1,57 @@
+let messageField = document.getElementById("input");
+let send = document.getElementById('sent');
+send.addEventListener('click', function() {
+    let message = document.createElement("div");
+      message.style.padding = "0.6em";
+      message.style.backgroundColor = "rgba(3, 3, 230, 0.62)";
+      message.style.color = "white";
+      message.style.borderRadius = "0.2em";
+      message.style.borderTopLeftRadius = "0.7em";
+      message.style.borderTopRightRadius = "0.7em";
+      message.style.borderBottomLeftRadius = "0.7em";
+      message.style.borderBottomRightRadius = "0.2em";
+      message.style.margin = "0.5em";
+      message.style.width = "50%";
+      message.style.boxSizing = "border-box";
+      message.style.display = "flex";
+      message.style.justifySelf = "flex-end";
+      message.textContent = messageField.value;
+      messageField.value = "";
+      document.querySelector("#chat-area").appendChild(message);
+      let compareValue = message.textContent.toLowerCase();
+      if (compareValue == "hello") {
+        let reply = document.createElement("div");
+        reply.style.padding = "0.6em";
+        reply.style.backgroundColor = "rgba(156, 155, 155, 0.86)";
+        reply.style.color = "white";
+        reply.style.borderTopLeftRadius = "0.7em";
+        reply.style.borderTopRightRadius = "0.7em";
+        reply.style.borderBottomLeftRadius = "0.2em";
+        reply.style.borderBottomRightRadius = "0.7em";
+        reply.style.margin = "0.5em";
+        reply.style.width = "50%";
+        reply.style.boxSizing = "border-box";
+        reply.style.display = "flex";
+        reply.style.flexWrap = "wrap";
+        reply.style.justifySelf = "flex-start";
+        reply.textContent = "Hi";
+        document.querySelector("#chat-area").appendChild(reply);
+      } else if (compareValue == "how are you?") {
+        let reply = document.createElement("div");
+        reply.style.padding = "0.6em";
+        reply.style.backgroundColor = "rgba(156, 155, 155, 0.86)";
+        reply.style.borderTopLeftRadius = "0.7em";
+        reply.style.borderTopRightRadius = "0.7em";
+        reply.style.borderBottomLeftRadius = "0.2em";
+        reply.style.borderBottomRightRadius = "0.7em";
+        reply.style.color = "white";
+        reply.style.margin = "0.5em";
+        reply.style.width = "50%";
+        reply.style.boxSizing = "border-box";
+        reply.style.display = "flex";
+        reply.style.flexWrap = "wrap";
+        reply.style.justifySelf = "flex-start";
+        reply.textContent = "I am fine, what about you?";
+        document.querySelector("#chat-area").appendChild(reply);
+      }
+});

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="common.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css" />
+  </head>
+  <body>
+    <div class="container" style="background-color: rgba(0, 0, 0, 0.093);backdrop-filter:blur(4px);border-radius:15px;border-color:cyan;box-shadow:0px 0px 5px rgba(255, 255, 255, 0.743);">
+      <div class="profile-logo">
+        <img src="WeChatLogo.png" alt="logo" />
+      </div>
+      <div class="desc">
+        <p id="main">We Chat</p>
+        <p>Connect beyond boundaries</p>
+      </div>
+      <div class="input-email">
+        <input type="email" id="email1" required placeholder="Email address"/>
+      </div>
+      <div class="input-email">
+        <input type="text" required placeholder="Your Name" id="usernameInput" />
+      </div>
+      <div class="input-email" id="inputmail">
+        <input
+          type="password"
+          required
+          placeholder="Password"
+          name="password"
+          id="password1"
+        />
+      </div>
+      <div style="display: flex; justify-content: center; gap: 1em; margin-top: 1em;">
+        <button class="btn" id="btnn1">
+          <span class="box" style="color: black;"> sign-up!</span>
+        </button>
+        <button class="btn" id="backToLoginBtn" type="button">
+          <span class="box" style="color: black;">Back to Login</span>
+        </button>
+      </div>
+      <br>
+      <br>
+      <br>
+<div class="lds-ellipsis"><div></div><div></div><div></div></div>
+    </div>
+    <br><br>
+    <script>
+      function delay (URL) {
+    setTimeout( function() { window.location = URL }, 1500 );
+}
+      document.getElementById('backToLoginBtn').onclick = function() {
+        window.location.href = 'login.html';
+      };
+    </script>
+    <script type="module" src="register.js"></script>
+  </body>
+</html>
