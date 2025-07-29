@@ -14,6 +14,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: rgba(228, 228, 228, 0.726);
       }
       #list-area {
         border-radius: 1em;
@@ -24,17 +25,21 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        background: linear-gradient(rgb(121, 248, 206), aquamarine, rgb(245, 235, 235));
       }
       #btn:active {
         transform: translate(0px, 1px);
       }
-      #editbtn,
-      #deletebtn {
+      .editbtn,
+      .deletebtn {
         padding: 0.2em 0.2em;
         color: white;
         background: linear-gradient(rgb(98, 3, 107), rgb(86, 12, 190));
         border-radius: 0.4em;
         box-shadow: 0px 0px 4px lightgrey;
+      }
+      input::placeholder {
+        font-size: 1.5em;
       }
     </style>
   </head>
